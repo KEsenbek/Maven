@@ -1,0 +1,55 @@
+
+Maven - lifecycle - phases/goals
+
+
+Maven lifecycles
+
+
+
+1. clean -- This phase is responsible for cleaning up the output generated from previous builds.
+
+2. validate -- In this phase, Maven validates the project files, e.g., checking if all required information is available.
+
+3. compile -- During this phase, Maven compiles the source code of the project.
+
+4. test -- In the test phase, Maven runs unit tests for the project.
+
+5. package -- In this phase, Maven packages the compiled code into a distributable format, such as JAR, WAR, or EAR.
+
+6. install -- The install phase installs the package into the local Maven repository. This allows other projects on the same machine to depend on it.
+
+7. deploy -- This phase deploys the final package to a remote repository, making it available to other developers or projects.
+
+8. verify -- The verify phase runs any checks to verify the package is valid and meets quality criteria.
+
+9. site -- During the site phase, Maven generates project documentation and reports.
+
+10. clean site -- If you want to clean the previously generated site, you can use this phase.
+
+11.
+
+These are some of the most common phases and goals used in Maven.
+ To execute a specific phase or goal, you can use the mvn command followed by the phase/goal name. For example:
+
+# To compile the code
+mvn compile
+
+# To run tests
+mvn test
+
+# To create a JAR package
+mvn package
+
+# To install the package in the local repository
+mvn install
+
+# To generate project documentation and reports
+mvn site
+
+
+Remember that the goals executed in a particular phase are determined by the Maven lifecycle
+and the plugins configured in the pom.xml file of your project.
+
+Make sure you have Maven installed and the project's pom.xml file
+set up with appropriate configurations and dependencies before running these commands.
+
